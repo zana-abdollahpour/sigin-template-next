@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+:root {
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --text-primary: #000000;
+  --text-secondary: #676767;
+  --border-color: #ececec;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --input-bg: #ffffff;
+  --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --bg-primary: #212121;
+  --bg-secondary: #171717;
+  --text-primary: #ffffff;
+  --text-secondary: #9b9b9b;
+  --border-color: #424242;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+  --input-bg: #2f2f2f;
+  --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: "Vazirmatn", sans-serif; /* Default to FA since html is rtl */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+html[dir="ltr"] body {
+  font-family: "Inter", sans-serif;
+}
