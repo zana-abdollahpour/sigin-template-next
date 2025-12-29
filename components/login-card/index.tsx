@@ -2,6 +2,7 @@ import { cn } from "@/utils/tailwind-utils";
 
 import { Header } from "./header";
 import { ThirdPartyLogin } from "./third-party-login";
+import { MoreThirdPartyLogins } from "./more-third-party-logins";
 import { Divider } from "./divider";
 import { CredentialsLogin } from "./credentials-login";
 import { Footer } from "./footer";
@@ -17,6 +18,7 @@ export function LoginCard() {
       >
         <Header />
         <ThirdPartyLogin />
+        <MoreThirdPartyLogins />
         <Divider />
         <CredentialsLogin />
         <Footer />
