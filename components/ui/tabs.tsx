@@ -38,18 +38,15 @@ function Tabs({
   };
 
   return (
-    <TabsContext.Provider value={{ value, onValueChange: handleValueChange }}>
+    <TabsContext value={{ value, onValueChange: handleValueChange }}>
       <div
         data-slot="tabs"
-        className={cn(
-          "inline-flex rounded-full border border-(--border-color) bg-(--bg-secondary) p-1",
-          className,
-        )}
+        className={cn("inline-flex flex-col", className)}
         {...props}
       >
         {children}
       </div>
-    </TabsContext.Provider>
+    </TabsContext>
   );
 }
 
@@ -61,7 +58,8 @@ function TabsList({
     <div
       data-slot="tabs-list"
       className={cn(
-        "bg-muted text-muted-foreground inline-flex h-10 w-fit items-center justify-center rounded-lg p-0.75",
+        "text-muted-foreground inline-flex h-11 w-fit items-center justify-center p-0.75",
+        "rounded-full border border-(--border-color) bg-(--bg-secondary)",
         className,
       )}
       {...props}
