@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { cn } from "@/utils/tailwind-utils";
+import { useTranslation } from "@/i18n/use-translation";
 
 import { Button } from "@/components/ui/button";
 
@@ -10,6 +11,7 @@ const options = ["Microsoft", "Facebook", "Github", "Gitlab", "Discord"];
 
 export function MoreThirdPartyLogins() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="text-center">
@@ -20,7 +22,7 @@ export function MoreThirdPartyLogins() {
         className="text-xs text-(--text-secondary) underline decoration-dotted transition hover:text-(--text-primary)"
         onClick={() => setIsExpanded((cur) => !cur)}
       >
-        سایر گزینه‌ها
+        {t("auth.login.moreThirdParties")}
       </Button>
 
       <div

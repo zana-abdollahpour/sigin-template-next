@@ -1,3 +1,5 @@
+"use client";
+
 import {
   PiAppleLogo,
   PiGoogleLogo,
@@ -7,7 +9,11 @@ import {
 
 import { Button } from "@/components/ui/button";
 
+import { useTranslation } from "@/i18n/use-translation";
+
 export function ThirdPartyLogin() {
+  const { t } = useTranslation();
+
   return (
     <div className="mb-3 space-y-3">
       <Button
@@ -16,7 +22,7 @@ export function ThirdPartyLogin() {
       >
         <PiGoogleLogo className="text-lg font-medium" />
         <span data-en="Continue with Google" data-fa="ورود با گوگل">
-          ورود با گوگل
+          {t("auth.login.googleLogin")}
         </span>
       </Button>
 
