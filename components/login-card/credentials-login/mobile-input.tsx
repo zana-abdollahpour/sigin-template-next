@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/tailwind-utils";
+import { useTranslation } from "@/i18n/use-translation";
 
 interface MobileInputProps {
   isOtpSent: boolean;
@@ -8,6 +9,8 @@ interface MobileInputProps {
 }
 
 export function MobileInput({ isOtpSent, ref }: MobileInputProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="relative">
       <label
@@ -16,7 +19,7 @@ export function MobileInput({ isOtpSent, ref }: MobileInputProps) {
         data-en="Phone Number"
         data-fa="شماره موبایل"
       >
-        شماره موبایل
+        {t("auth.login.phoneNumber")}
       </label>
       <div className="relative">
         <input

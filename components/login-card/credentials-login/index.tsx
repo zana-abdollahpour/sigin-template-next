@@ -3,6 +3,8 @@
 import { useRef, useState } from "react";
 import { PiArrowLeft } from "react-icons/pi";
 
+import { useTranslation } from "@/i18n/use-translation";
+
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -11,6 +13,8 @@ import { EmailInput } from "./email-input";
 import { OtpVerification } from "./otp-verification";
 
 export function CredentialsLogin() {
+  const { t } = useTranslation();
+
   const [activeTab, setActiveTab] = useState("email");
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -57,10 +61,10 @@ export function CredentialsLogin() {
       >
         <TabsList className="mx-auto">
           <TabsTrigger data-en="Email" data-fa="ایمیل" value="email">
-            ایمیل
+            {t("auth.login.email")}
           </TabsTrigger>
           <TabsTrigger data-en="Phone" data-fa="تلفن" value="phone">
-            تلفن
+            {t("auth.login.phone")}
           </TabsTrigger>
         </TabsList>
 
@@ -85,7 +89,7 @@ export function CredentialsLogin() {
             data-en="Invalid code. Please try again."
             data-fa="کد نامعتبر است. مجدد تلاش کنید."
           >
-            کد نامعتبر است. مجدد تلاش کنید.
+            {t("auth.login.invalidOtpMessage")}
           </span>
         </div>
       )}
@@ -95,7 +99,7 @@ export function CredentialsLogin() {
           data-en={isOtpSent ? "Sign In" : "Continue"}
           data-fa={isOtpSent ? "ورود" : "ادامه"}
         >
-          {isOtpSent ? "ورود" : "ادامه"}
+          {isOtpSent ? t("auth.login.loginCta") : t("auth.login.continue")}
         </span>
         <PiArrowLeft className="ltr:rotate-180 rtl:rotate-0" />
       </Button>
@@ -106,7 +110,7 @@ export function CredentialsLogin() {
         data-en="Continue as Guest"
         data-fa="ادامه به صورت مهمان"
       >
-        ادامه به صورت مهمان
+        {t("auth.login.continueAsGuest")}
       </Button>
     </div>
   );

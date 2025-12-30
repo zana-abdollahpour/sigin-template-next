@@ -1,4 +1,5 @@
 import { cn } from "@/utils/tailwind-utils";
+import { useTranslation } from "@/i18n/use-translation";
 
 interface EmailInputProps {
   isOtpSent: boolean;
@@ -6,6 +7,8 @@ interface EmailInputProps {
 }
 
 export function EmailInput({ isOtpSent, ref }: EmailInputProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="relative">
       <label
@@ -14,7 +17,7 @@ export function EmailInput({ isOtpSent, ref }: EmailInputProps) {
         data-en="Email Address"
         data-fa="آدرس ایمیل"
       >
-        آدرس ایمیل
+        {t("auth.login.emailAddress")}
       </label>
       <input
         ref={ref}

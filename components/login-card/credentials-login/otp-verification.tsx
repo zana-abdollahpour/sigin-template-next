@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/tailwind-utils";
+import { useTranslation } from "@/i18n/use-translation";
 
 const OTP_LENGTH = 6;
 interface OtpVerificationProps {
@@ -10,6 +11,8 @@ interface OtpVerificationProps {
 }
 
 export function OtpVerification({ isOtpSent, ref }: OtpVerificationProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn(
@@ -23,7 +26,7 @@ export function OtpVerification({ isOtpSent, ref }: OtpVerificationProps) {
         data-en="Enter Code"
         data-fa="کد تایید"
       >
-        کد تایید
+        {t("auth.login.otpCode")}
       </label>
       <input
         type="text"
@@ -41,7 +44,7 @@ export function OtpVerification({ isOtpSent, ref }: OtpVerificationProps) {
         data-en="Check your inbox/SMS"
         data-fa="صندوق ورودی یا پیامک خود را چک کنید"
       >
-        صندوق ورودی یا پیامک خود را چک کنید
+        {t("auth.login.checkForOtp")}
       </p>
     </div>
   );
