@@ -1,11 +1,11 @@
 "use client";
 
-import { translations } from "./translations";
+import { TranslationObject, translations } from "./translations";
 
 import { useLangAttributes } from "@/providers/lang";
 import type { NestedKeyOf } from "@/types/helpers";
 
-type TranslationKeys = NestedKeyOf<typeof translations.en>;
+type TranslationKeys = NestedKeyOf<TranslationObject>;
 
 export function useTranslation() {
   const { langAttributes } = useLangAttributes();
