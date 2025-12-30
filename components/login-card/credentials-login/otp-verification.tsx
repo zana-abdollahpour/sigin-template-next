@@ -23,8 +23,6 @@ export function OtpVerification({ isOtpSent, ref }: OtpVerificationProps) {
       <label
         htmlFor="otp-input"
         className="mr-1 mb-1.5 ml-1 block text-xs font-medium text-(--text-secondary)"
-        data-en="Enter Code"
-        data-fa="کد تایید"
       >
         {t("auth.login.otpCode")}
       </label>
@@ -39,11 +37,7 @@ export function OtpVerification({ isOtpSent, ref }: OtpVerificationProps) {
         )}
         placeholder={"•".repeat(OTP_LENGTH)}
       />
-      <p
-        className="mt-1 text-center text-[10px] text-(--text-secondary)"
-        data-en="Check your inbox/SMS"
-        data-fa="صندوق ورودی یا پیامک خود را چک کنید"
-      >
+      <p className="mt-1 text-center text-[10px] text-(--text-secondary)">
         {t("auth.login.checkForOtp")}
       </p>
     </div>

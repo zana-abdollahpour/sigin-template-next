@@ -21,9 +21,7 @@ export function ThirdPartyLogin() {
         className="w-full justify-center gap-2 font-medium"
       >
         <PiGoogleLogo className="text-lg font-medium" />
-        <span data-en="Continue with Google" data-fa="ورود با گوگل">
-          {t("auth.login.googleLogin")}
-        </span>
+        <span>{t("auth.login.googleLogin")}</span>
       </Button>
 
       <div className="grid grid-cols-3 gap-3">

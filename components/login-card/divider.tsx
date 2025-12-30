@@ -11,11 +11,7 @@ export function Divider() {
         <div className="w-full border-t border-(--border-color)"></div>
       </div>
       <div className="relative flex justify-center text-xs uppercase">
-        <span
-          className="bg-(--bg-primary) px-2 text-(--text-secondary)"
-          data-en="Or continue with"
-          data-fa="یا ورود با"
-        >
+        <span className="bg-(--bg-primary) px-2 text-(--text-secondary)">
           {t("auth.login.orLoginWith")}
         </span>
       </div>

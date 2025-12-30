@@ -14,8 +14,6 @@ export function EmailInput({ isOtpSent, ref }: EmailInputProps) {
       <label
         htmlFor="email-input"
         className="mr-1 mb-1.5 ml-1 block text-xs font-medium text-(--text-secondary)"
-        data-en="Email Address"
-        data-fa="آدرس ایمیل"
       >
         {t("auth.login.emailAddress")}
       </label>

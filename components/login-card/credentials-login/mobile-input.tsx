@@ -16,8 +16,6 @@ export function MobileInput({ isOtpSent, ref }: MobileInputProps) {
       <label
         htmlFor="phone-input"
         className="mr-1 mb-1.5 ml-1 block text-xs font-medium text-(--text-secondary)"
-        data-en="Phone Number"
-        data-fa="شماره موبایل"
       >
         {t("auth.login.phoneNumber")}
       </label>

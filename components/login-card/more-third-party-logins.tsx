@@ -17,8 +17,6 @@ export function MoreThirdPartyLogins() {
     <div className="text-center">
       <Button
         variant="unstyled"
-        data-en="More options"
-        data-fa="سایر گزینه‌ها"
         className="text-xs text-(--text-secondary) underline decoration-dotted transition hover:text-(--text-primary)"
         onClick={() => setIsExpanded((cur) => !cur)}
       >

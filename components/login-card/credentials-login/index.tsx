@@ -60,12 +60,8 @@ export function CredentialsLogin() {
         className="mb-2 flex justify-center space-y-4"
       >
         <TabsList className="mx-auto">
-          <TabsTrigger data-en="Email" data-fa="ایمیل" value="email">
-            {t("auth.login.email")}
-          </TabsTrigger>
-          <TabsTrigger data-en="Phone" data-fa="تلفن" value="phone">
-            {t("auth.login.phone")}
-          </TabsTrigger>
+          <TabsTrigger value="email">{t("auth.login.email")}</TabsTrigger>
+          <TabsTrigger value="phone">{t("auth.login.phone")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="email" className="relative">
@@ -85,20 +81,12 @@ export function CredentialsLogin() {
 
       {hasError && (
         <div className="rounded-lg border border-red-100 bg-red-50 p-2 text-center text-xs text-red-600">
-          <span
-            data-en="Invalid code. Please try again."
-            data-fa="کد نامعتبر است. مجدد تلاش کنید."
-          >
-            {t("auth.login.invalidOtpMessage")}
-          </span>
+          <span>{t("auth.login.invalidOtpMessage")}</span>
         </div>
       )}
 
       <Button onClick={handleSubmit} variant="primary" className="mt-2 w-full">
-        <span
-          data-en={isOtpSent ? "Sign In" : "Continue"}
-          data-fa={isOtpSent ? "ورود" : "ادامه"}
-        >
+        <span>
           {isOtpSent ? t("auth.login.loginCta") : t("auth.login.continue")}
         </span>
         <PiArrowLeft className="ltr:rotate-180 rtl:rotate-0" />
@@ -107,8 +95,6 @@ export function CredentialsLogin() {
       <Button
         variant="unstyled"
         className="mt-2 w-full text-xs text-(--text-secondary) transition hover:text-(--text-primary)"
-        data-en="Continue as Guest"
-        data-fa="ادامه به صورت مهمان"
       >
         {t("auth.login.continueAsGuest")}
       </Button>
