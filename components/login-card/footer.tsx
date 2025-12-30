@@ -6,7 +6,7 @@ export function Footer() {
           data-en="By clicking continue, you agree to our"
           data-fa="با ادامه دادن، شما قوانین ما را می‌پذیرید:"
         >
-          با ادامه دادن، شما قوانین ما را می‌پذیرید:
+          با ادامه دادن، شما قوانین ما را می‌پذیرید:{" "}
         </span>
         <a
           href="#"
@@ -16,7 +16,7 @@ export function Footer() {
         >
           شرایط استفاده
         </a>
-        <span data-en="and" data-fa="و">
+        <span data-en="and" data-fa="و" className="mx-0.5">
           و
         </span>
         <a
