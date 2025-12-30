@@ -1,4 +1,10 @@
+"use client";
+
+import { useTranslation } from "@/i18n/use-translation";
+
 export function Divider() {
+  const { t } = useTranslation();
+
   return (
     <div className="relative py-6">
       <div className="absolute inset-0 flex items-center">
@@ -10,7 +16,7 @@ export function Divider() {
           data-en="Or continue with"
           data-fa="یا ورود با"
         >
-          یا ورود با
+          {t("auth.login.orLoginWith")}
         </span>
       </div>
     </div>
